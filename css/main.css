@@ -1,0 +1,206 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100vh;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	font-family: "Arial", sans-serif;
+	background-color: rgb(10, 82, 67);
+}
+
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+img {
+	display: block;
+	height: 100%;
+}
+
+header {
+	width: 100%;
+	background-color: rgb(39, 133, 106);
+	padding: 20px 0;
+	margin-bottom: 20px;
+}
+
+main {
+	width: 100%;
+	flex-shrink: 0;
+}
+
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 24px;
+	color: white;
+	font-weight: 700;
+}
+
+.pokemon-search-input {
+	outline: none;
+	border: none;
+	padding: 10px;
+	background-color: rgb(16, 76, 154);
+	color: white;
+	border-radius: 10px;
+}
+
+.pokemon-search-input::placeholder {
+	color: white;
+}
+
+.pokemon-search-btn {
+	padding: 10px;
+	background-color: blue;
+	border: none;
+	color: white;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.list {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	flex-wrap: wrap;
+}
+
+.list__item {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgb(28, 92, 110);
+	border-radius: 15px;
+	margin: 15px;
+}
+
+.list-item__name {
+	margin: 5px 0;
+	font-size: 22px;
+	color: white;
+}
+
+.list-item__info {
+	margin: 5px 0 15px 0;
+	color: white;
+	font-size: 20px;
+}
+
+footer {
+	width: 100%;
+	padding: 30px 0;
+	text-align: center;
+	color: white;
+	background-color: rgb(41, 14, 52);
+	line-height: 40px;
+}
+
+.not-found-modal-box {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.642);
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s ease;
+	transform: scale(0);
+}
+
+.not-found-modal-box-active {
+	transform: scale(1);
+}
+
+.not-found-modal {
+	width: 60%;
+	height: 60%;
+	background-color: rgb(26, 170, 115);
+	position: fixed;
+	top: 20%;
+	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.not-found-modal-title {
+	text-align: center;
+	font-size: 40px;
+	color: yellow;
+}
+
+.not-found-btn {
+	margin-top: 100px;
+	padding: 10px 60px;
+	background-color: yellow;
+	border: none;
+	border-radius: 20px;
+	font-size: 26px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+/* Media */
+@media (max-width: 850px) {
+	.list__item {
+		width: 28%;
+		margin: 10px;
+	}
+}
+
+@media (max-width: 600px) {
+	.list__item {
+		width: 45%;
+	}
+
+	.not-found-modal {
+		width: 90%;
+		height: 40%;
+	}
+
+	.not-found-modal-title {
+		font-size: 24px;
+	}
+
+	.not-found-btn {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 450px) {
+	.container {
+		padding: 0 5px;
+	}
+	.logo {
+		margin-bottom: 20px;
+	}
+	.header-inner {
+		flex-direction: column;
+	}
+	.list__item {
+		width: 100%;
+	}
+}

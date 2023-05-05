@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Pokemons</title>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="header-inner">
+					<a class="logo" href="./index.html">Pokemons</a>
+					<form class="search-pokemon-form" method="post">
+						<input
+							class="pokemon-search-input"
+							type="search"
+							placeholder="pokemon search..."
+							required
+						/>
+						<button class="pokemon-search-btn" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="container">
+				<div class="hero">
+					<ul class="list"></ul>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<h2>Robocode (Du,Chor,Juma) 14:00 2023/05/05</h2>
+		</footer>
+
+		<!-- Modal -->
+		<div class="not-found-modal-box">
+			<div class="not-found-modal">
+				<h3 class="not-found-modal-title">Pokemon topilmadi!</h3>
+				<button class="not-found-btn">OK</button>
+			</div>
+		</div>
+
+		<!-- Template -->
+		<template class="show-pokemon-template">
+			<li class="list__item">
+				<img class="list-item__img" src="" alt="" />
+				<h3 class="list-item__name"></h3>
+				<p class="list-item__info"></p>
+			</li>
+		</template>
+
+		<script src="./js/pokemons.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
